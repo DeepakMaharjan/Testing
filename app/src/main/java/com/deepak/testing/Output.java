@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 public class Output extends AppCompatActivity {
 
-    TextView tvOutput;
+    private TextView tvOutput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +18,8 @@ public class Output extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-        String message = bundle.getString("result");
+        Float message = bundle.getFloat("result");
 
-        tvOutput.setText(message);
+        tvOutput.setText(Float.toString(message));
     }
 }
